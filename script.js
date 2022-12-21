@@ -1,7 +1,7 @@
 let form = document.getElementById("formulaire");
 let userName ;
 let h2 = document.querySelector("h2");
-
+let inputs = document.querySelector("input");
 
 
 
@@ -10,6 +10,7 @@ form.addEventListener("submit",(event)=>{
     document.getElementById("api").style.display ="block";
     event.preventDefault();
     search()
+    inputs.value ="";
 })
 
 // The function of searching for someone in github
@@ -23,7 +24,7 @@ function search(){
         document.querySelector(".picture").innerHTML= `<a href="${data.html_url}" target="_blank"> <img src="${data.avatar_url}"/></a>`;
         document.querySelector("h2").innerHTML = `<a href="${data.html_url}" target="_blank"> ${data.name}</a>`;
         document.querySelector("h3").innerText = `Number Of Repositories : ${data.public_repos}`;
-        document.querySelector("h4").innerText = `this account has been created since : ${data.created_at}`
+        document.querySelector("h4").innerText = `This Account Has Been Created Since : ${data.created_at}`
     })
     fetch(`https://api.github.com/users/${name}/repos`)
 

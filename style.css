@@ -4,7 +4,6 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-
 body{
     background: url(./img/1366_2000.webp);
     background-repeat: no-repeat;
@@ -109,3 +108,9 @@ ul{
 li >a:hover{
     color: #f903bb;
 }
+#api h1{
+    margin: 20px auto;
+    font-size: 30px;
+    font-weight: 600;
+}
+
